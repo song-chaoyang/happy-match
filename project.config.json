@@ -1,0 +1,31 @@
+{
+  "description": "开心消消乐 - Happy Match",
+  "packOptions": {"ignore": []},
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {"ignore": [], "disablePlugins": [], "outputPath": ""}
+  },
+  "compileType": "game",
+  "libVersion": "3.3.4",
+  "appid": "touristappid",
+  "projectname": "happy-match",
+  "condition": {}
+}

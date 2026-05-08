@@ -1,0 +1,13 @@
+require('./js/config');
+require('./js/candy');
+require('./js/particles');
+require('./js/sound');
+require('./js/animation');
+require('./js/board');
+require('./js/storage');
+require('./js/shop');
+require('./js/pets');
+require('./js/map');
+require('./js/ui');
+require('./js/game');
+require('./js/main');
