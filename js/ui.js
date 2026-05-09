@@ -600,7 +600,7 @@ class UIManager {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
-    ctx.fillText('\u5F00\u5FC3\u6D88\u6D88\u4E50', w / 2 + 2, titleY + 2);
+    ctx.fillText('萌趣三消', w / 2 + 2, titleY + 2);
 
     // 标题金色渐变
     var titleGrad = ctx.createLinearGradient(w / 2 - 100, titleY - 20, w / 2 + 100, titleY + 20);
@@ -610,12 +610,12 @@ class UIManager {
     titleGrad.addColorStop(0.7, '#FFF8DC');
     titleGrad.addColorStop(1, '#FFD700');
     ctx.fillStyle = titleGrad;
-    ctx.fillText('\u5F00\u5FC3\u6D88\u6D88\u4E50', w / 2, titleY);
+    ctx.fillText('萌趣三消', w / 2, titleY);
 
     // 标题描边
     ctx.strokeStyle = '#DAA520';
     ctx.lineWidth = 1.5;
-    ctx.strokeText('\u5F00\u5FC3\u6D88\u6D88\u4E50', w / 2, titleY);
+    ctx.strokeText('萌趣三消', w / 2, titleY);
     ctx.restore();
 
     // 吉祥物（小狐狸头像）
