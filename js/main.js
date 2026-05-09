@@ -1,5 +1,5 @@
 /**
- * 萌趣三消 - 主入口
+ * 萌趣消消 - 主入口
  * 初始化所有系统，启动游戏循环
  */
 
@@ -56,7 +56,7 @@
     // 开始游戏循环
     requestAnimationFrame(gameLoop);
 
-    console.log('萌趣三消 已启动！');
+    console.log('萌趣消消 已启动！');
   }
 
   function resize() {

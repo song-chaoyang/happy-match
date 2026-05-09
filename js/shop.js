@@ -1,5 +1,5 @@
 // ============================================================
-// shop.js - 萌趣三消 商城数据
+// shop.js - 萌趣消消 商城数据
 // ============================================================
 
 var ShopData = {
@@ -10,7 +10,7 @@ var ShopData = {
       name: '锤子',
       desc: '消除任意一个方块',
       price: 100,
-      icon: '\u{1F528}',
+      icon: '锤',
       color: '#FF6B35'
     },
     {
@@ -18,7 +18,7 @@ var ShopData = {
       name: '刷新',
       desc: '重新排列所有方块',
       price: 80,
-      icon: '\u{1F500}',
+      icon: '刷',
       color: '#4169E1'
     },
     {
@@ -26,7 +26,7 @@ var ShopData = {
       name: '+5步',
       desc: '增加5步',
       price: 50,
-      icon: '\u2795',
+      icon: '+5',
       color: '#32CD32'
     },
     {
@@ -34,7 +34,7 @@ var ShopData = {
       name: '彩色球',
       desc: '消除所有同色方块',
       price: 200,
-      icon: '\u{1F48E}',
+      icon: '彩',
       color: '#9370DB'
     }
   ],
@@ -48,7 +48,7 @@ var ShopData = {
       items: [{ id: 'hammer', count: 5 }],
       price: 450,
       originalPrice: 500,
-      icon: '\u{1F528}',
+      icon: '锤',
       color: '#FF6B35',
       discount: '9折'
     },
@@ -59,7 +59,7 @@ var ShopData = {
       items: [{ id: 'hammer', count: 2 }, { id: 'refresh', count: 2 }],
       price: 300,
       originalPrice: 360,
-      icon: '\u{1F381}',
+      icon: '礼',
       color: '#FFD700',
       discount: '83折'
     },
@@ -75,7 +75,7 @@ var ShopData = {
       ],
       price: 500,
       originalPrice: 740,
-      icon: '\u{1F4E6}',
+      icon: '全',
       color: '#FF69B4',
       discount: '68折'
     }
@@ -88,7 +88,7 @@ var ShopData = {
       name: '小宝箱',
       desc: '随机3个道具',
       price: 300,
-      icon: '\u{1F4E6}',
+      icon: '小',
       color: '#CD853F',
       rewards: [
         { items: [{ id: 'hammer', count: 1 }, { id: 'refresh', count: 1 }, { id: 'plus5', count: 1 }] },
@@ -101,7 +101,7 @@ var ShopData = {
       name: '大宝箱',
       desc: '随机5个道具 + 1个皮肤碎片',
       price: 800,
-      icon: '\u{1F3C6}',
+      icon: '大',
       color: '#FFD700',
       rewards: [
         { items: [{ id: 'hammer', count: 3 }, { id: 'refresh', count: 2 }] },
@@ -114,7 +114,7 @@ var ShopData = {
       name: '豪华宝箱',
       desc: '随机10个道具 + 3个皮肤碎片',
       price: 1500,
-      icon: '\u{1F451}',
+      icon: '豪',
       color: '#FF1493',
       rewards: [
         { items: [{ id: 'hammer', count: 5 }, { id: 'refresh', count: 3 }, { id: 'colorBomb', count: 2 }] },
@@ -132,7 +132,7 @@ var ShopData = {
       desc: '首次购买半价！全套道具x1',
       price: 250,
       originalPrice: 500,
-      icon: '\u{1F31F}',
+      icon: '新',
       color: '#00CED1',
       condition: 'firstPurchase',
       items: [
@@ -150,7 +150,7 @@ var ShopData = {
       desc: '锤子x3 + +5步x2',
       price: 200,
       originalPrice: 400,
-      icon: '\u{23F0}',
+      icon: '日',
       color: '#FF8C00',
       condition: 'daily',
       items: [
@@ -167,7 +167,7 @@ var ShopData = {
       desc: '彩色球x2 + 锤子x2',
       price: 350,
       originalPrice: 600,
-      icon: '\u{1F389}',
+      icon: '末',
       color: '#9370DB',
       condition: 'weekend',
       items: [
@@ -183,7 +183,7 @@ var ShopData = {
       desc: '500金币 + 锤子x1',
       price: 0,
       originalPrice: 0,
-      icon: '\u{1F4B0}',
+      icon: '金',
       color: '#FFD700',
       condition: 'free',
       items: [],
@@ -197,13 +197,13 @@ var ShopData = {
 
   // ---- 每日奖励 ----
   dailyRewards: [
-    { day: 1, reward: { type: 'coins', amount: 100 }, icon: '\u{1F4B0}', name: '100金币' },
-    { day: 2, reward: { type: 'item', id: 'hammer', count: 1 }, icon: '\u{1F528}', name: '锤子x1' },
-    { day: 3, reward: { type: 'coins', amount: 200 }, icon: '\u{1F4B0}', name: '200金币' },
-    { day: 4, reward: { type: 'item', id: 'plus5', count: 2 }, icon: '\u2795', name: '+5步x2' },
-    { day: 5, reward: { type: 'item', id: 'colorBomb', count: 1 }, icon: '\u{1F48E}', name: '彩色球x1' },
-    { day: 6, reward: { type: 'coins', amount: 500 }, icon: '\u{1F4B0}', name: '500金币' },
-    { day: 7, reward: { type: 'bundle', id: 'bundle2' }, icon: '\u{1F381}', name: '全套道具x1' }
+    { day: 1, reward: { type: 'coins', amount: 100 }, icon: '金', name: '100金币' },
+    { day: 2, reward: { type: 'item', id: 'hammer', count: 1 }, icon: '锤', name: '锤子x1' },
+    { day: 3, reward: { type: 'coins', amount: 200 }, icon: '金', name: '200金币' },
+    { day: 4, reward: { type: 'item', id: 'plus5', count: 2 }, icon: '+5', name: '+5步x2' },
+    { day: 5, reward: { type: 'item', id: 'colorBomb', count: 1 }, icon: '彩', name: '彩色球x1' },
+    { day: 6, reward: { type: 'coins', amount: 500 }, icon: '金', name: '500金币' },
+    { day: 7, reward: { type: 'bundle', id: 'bundle2' }, icon: '礼', name: '全套道具x1' }
   ],
 
   // ---- 辅助方法 ----
@@ -240,153 +240,133 @@ var ShopData = {
     return null;
   },
 
-  /** 获取今日可用的特惠列表 */
-  getAvailableSpecials: function() {
-    var available = [];
-    var now = new Date();
-    var dayOfWeek = now.getDay(); // 0=周日, 6=周六
-    var isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
-
-    for (var i = 0; i < this.specials.length; i++) {
-      var sp = this.specials[i];
-      var show = false;
-
-      switch (sp.condition) {
-        case 'firstPurchase':
-          var data = Storage.load();
-          show = !data.firstPurchase;
-          break;
-        case 'daily':
-          show = true;
-          break;
-        case 'weekend':
-          show = isWeekend;
-          break;
-        case 'free':
-          show = true;
-          break;
-        default:
-          show = true;
-      }
-
-      if (show) available.push(sp);
+  /** 获取每日奖励信息 */
+  getDailyReward: function(day) {
+    for (var i = 0; i < this.dailyRewards.length; i++) {
+      if (this.dailyRewards[i].day === day) return this.dailyRewards[i];
     }
-
-    return available;
+    return null;
   },
 
   /** 购买道具 */
   purchaseItem: function(itemId, count) {
     var item = this.getItemById(itemId);
-    if (!item) return { success: false, reason: 'item_not_found' };
-
-    var data = Storage.load();
-    var totalPrice = item.price * (count || 1);
-
-    if (data.coins < totalPrice) {
-      return { success: false, reason: 'insufficient_coins', needed: totalPrice - data.coins };
+    if (!item) return { success: false, message: '道具不存在' };
+    
+    var totalPrice = item.price * count;
+    if (this.saveData.coins < totalPrice) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= totalPrice;
-    if (!data.items) data.items = Storage.getDefault().items;
-    data.items[itemId] = (data.items[itemId] || 0) + (count || 1);
-    Storage.save(data);
-
-    return { success: true, coins: data.coins, itemCount: data.items[itemId] };
+    
+    this.saveData.coins -= totalPrice;
+    this.saveData.items[itemId] = (this.saveData.items[itemId] || 0) + count;
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', item: item, count: count };
   },
 
   /** 购买套餐 */
   purchaseBundle: function(bundleId) {
     var bundle = this.getBundleById(bundleId);
-    if (!bundle) return { success: false, reason: 'bundle_not_found' };
-
-    var data = Storage.load();
-    if (data.coins < bundle.price) {
-      return { success: false, reason: 'insufficient_coins', needed: bundle.price - data.coins };
+    if (!bundle) return { success: false, message: '套餐不存在' };
+    
+    if (this.saveData.coins < bundle.price) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= bundle.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
+    
+    this.saveData.coins -= bundle.price;
     for (var i = 0; i < bundle.items.length; i++) {
-      var bi = bundle.items[i];
-      data.items[bi.id] = (data.items[bi.id] || 0) + (bi.count || 1);
+      var item = bundle.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
     }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items };
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', bundle: bundle };
   },
 
   /** 购买宝箱 */
   purchaseChest: function(chestId) {
     var chest = this.getChestById(chestId);
-    if (!chest) return { success: false, reason: 'chest_not_found' };
-
-    var data = Storage.load();
-    if (data.coins < chest.price) {
-      return { success: false, reason: 'insufficient_coins', needed: chest.price - data.coins };
+    if (!chest) return { success: false, message: '宝箱不存在' };
+    
+    if (this.saveData.coins < chest.price) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= chest.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
-    // 随机选择奖励
+    
+    this.saveData.coins -= chest.price;
+    
+    // 随机选择一个奖励
     var rewardIndex = Math.floor(Math.random() * chest.rewards.length);
     var reward = chest.rewards[rewardIndex];
-
+    
     for (var i = 0; i < reward.items.length; i++) {
-      var ri = reward.items[i];
-      data.items[ri.id] = (data.items[ri.id] || 0) + (ri.count || 1);
+      var item = reward.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
     }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items, reward: reward };
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '开启成功', chest: chest, reward: reward };
   },
 
   /** 购买特惠 */
   purchaseSpecial: function(specialId) {
-    var sp = this.getSpecialById(specialId);
-    if (!sp) return { success: false, reason: 'special_not_found' };
-
-    var data = Storage.load();
-
-    // 免费特惠
-    if (sp.price === 0) {
-      if (!data.items) data.items = Storage.getDefault().items;
-      if (sp.coinReward) data.coins += sp.coinReward;
-      if (sp.bonusItem) {
-        data.items[sp.bonusItem.id] = (data.items[sp.bonusItem.id] || 0) + (sp.bonusItem.count || 1);
+    var special = this.getSpecialById(specialId);
+    if (!special) return { success: false, message: '特惠不存在' };
+    
+    if (special.condition === 'firstPurchase' && this.saveData.hasPurchased) {
+      return { success: false, message: '仅限首次购买' };
+    }
+    
+    if (special.condition === 'free') {
+      // 免费礼包
+      if (special.coinReward) {
+        this.saveData.coins += special.coinReward;
       }
-      if (sp.items) {
-        for (var i = 0; i < sp.items.length; i++) {
-          var si = sp.items[i];
-          data.items[si.id] = (data.items[si.id] || 0) + (si.count || 1);
+      if (special.bonusItem) {
+        this.saveData.items[special.bonusItem.id] = (this.saveData.items[special.bonusItem.id] || 0) + special.bonusItem.count;
+      }
+      Storage.save(this.saveData);
+      return { success: true, message: '领取成功', special: special };
+    }
+    
+    if (this.saveData.coins < special.price) {
+      return { success: false, message: '金币不足' };
+    }
+    
+    this.saveData.coins -= special.price;
+    for (var i = 0; i < special.items.length; i++) {
+      var item = special.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
+    }
+    
+    if (special.condition === 'firstPurchase') {
+      this.saveData.hasPurchased = true;
+    }
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', special: special };
+  },
+
+  /** 领取每日奖励 */
+  claimDailyReward: function(day) {
+    var reward = this.getDailyReward(day);
+    if (!reward) return { success: false, message: '奖励不存在' };
+    
+    if (reward.reward.type === 'coins') {
+      this.saveData.coins += reward.reward.amount;
+    } else if (reward.reward.type === 'item') {
+      this.saveData.items[reward.reward.id] = (this.saveData.items[reward.reward.id] || 0) + reward.reward.count;
+    } else if (reward.reward.type === 'bundle') {
+      var bundle = this.getBundleById(reward.reward.id);
+      if (bundle) {
+        for (var i = 0; i < bundle.items.length; i++) {
+          var item = bundle.items[i];
+          this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
         }
       }
-      Storage.save(data);
-      return { success: true, coins: data.coins, items: data.items };
     }
-
-    if (data.coins < sp.price) {
-      return { success: false, reason: 'insufficient_coins', needed: sp.price - data.coins };
-    }
-
-    data.coins -= sp.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
-    if (sp.items) {
-      for (var i = 0; i < sp.items.length; i++) {
-        var si = sp.items[i];
-        data.items[si.id] = (data.items[si.id] || 0) + (si.count || 1);
-      }
-    }
-
-    // 标记首次购买
-    if (sp.condition === 'firstPurchase') {
-      data.firstPurchase = true;
-    }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items };
+    
+    Storage.save(this.saveData);
+    return { success: true, message: '领取成功', reward: reward };
   }
 };

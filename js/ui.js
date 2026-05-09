@@ -1,5 +1,5 @@
 // ============================================================
-// ui.js - 萌趣三消 UI界面管理器
+// ui.js - 萌趣消消 UI界面管理器
 // ============================================================
 
 class UIManager {
@@ -181,6 +181,18 @@ class UIManager {
           rotation: Math.random() * Math.PI * 2,
           rotSpeed: (Math.random() - 0.5) * 0.1
         });
+      }
+    }
+
+    if (screen === 'game') {
+      // 初始化游戏（如果还未初始化）
+      if (!this.game) {
+        this.game = new Game(this.canvas);
+        this.game.ui = this;
+      }
+      // 如果没有活动关卡，自动开始第1关
+      if (!this.game.board || this.game.state === 'idle') {
+        this.game.startLevel(1);
       }
     }
   }
@@ -518,7 +530,7 @@ class UIManager {
     if (showBack) {
       this._addButton({
         x: 10, y: 8, w: 60, h: 34,
-        text: '\u2190 \u8FD4\u56DE', color: 'rgba(255,255,255,0.2)',
+        text: '← \u8FD4\u56DE', color: 'rgba(255,255,255,0.2)',
         fontSize: 13, radius: 8,
         action: function() { this.setScreen('menu'); }.bind(this)
       });
@@ -600,7 +612,7 @@ class UIManager {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
-    ctx.fillText('萌趣三消', w / 2 + 2, titleY + 2);
+    ctx.fillText('萌趣消消', w / 2 + 2, titleY + 2);
 
     // 标题金色渐变
     var titleGrad = ctx.createLinearGradient(w / 2 - 100, titleY - 20, w / 2 + 100, titleY + 20);
@@ -610,12 +622,12 @@ class UIManager {
     titleGrad.addColorStop(0.7, '#FFF8DC');
     titleGrad.addColorStop(1, '#FFD700');
     ctx.fillStyle = titleGrad;
-    ctx.fillText('萌趣三消', w / 2, titleY);
+    ctx.fillText('萌趣消消', w / 2, titleY);
 
     // 标题描边
     ctx.strokeStyle = '#DAA520';
     ctx.lineWidth = 1.5;
-    ctx.strokeText('萌趣三消', w / 2, titleY);
+    ctx.strokeText('萌趣消消', w / 2, titleY);
     ctx.restore();
 
     // 吉祥物（小狐狸头像）
@@ -643,35 +655,35 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: startBtnY, w: btnW, h: btnH,
-      text: '\u25B6 \u5F00\u59CB\u6E38\u620F', color: '#4CAF50',
+      text: '▶ \u5F00\u59CB\u6E38\u620F', color: '#4CAF50',
       fontSize: 18, bold: true, radius: 14,
       action: function() { this.setScreen('map'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u5173\u5361\u5730\u56FE', color: '#FF8C00',
+      text: '\u5173\u5361\u5730\u56FE', color: '#FF8C00',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('map'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 116, w: btnW, h: btnH,
-      text: '\u{1F6D2} \u5546\u57CE', color: '#4169E1',
+      text: '\u5546\u57CE', color: '#4169E1',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('shop'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 174, w: btnW, h: btnH,
-      text: '\u{1F381} \u6BCF\u65E5\u5956\u52B1', color: '#9370DB',
+      text: '\u6BCF\u65E5\u5956\u52B1', color: '#9370DB',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('daily'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 232, w: btnW, h: 40,
-      text: '\u2699 \u8BBE\u7F6E', color: '#888888',
+      text: '⚙ \u8BBE\u7F6E', color: '#888888',
       fontSize: 14, radius: 10,
       action: function() { this.setScreen('settings'); }.bind(this)
     });
@@ -982,7 +994,7 @@ class UIManager {
       (function(itm, yPos) {
         this._addButton({
           x: cx + cardW - 70, y: yPos + 18, w: 60, h: 34,
-          text: itm.price + '\u{1F4B0}', color: '#FF8C00',
+          text: itm.price + '💰', color: '#FF8C00',
           fontSize: 12, bold: true, radius: 8,
           action: function() {
             var result;
@@ -1055,7 +1067,7 @@ class UIManager {
       // 价格
       ctx.fillStyle = '#FFD700';
       ctx.font = 'bold 14px Arial';
-      ctx.fillText(chest.price + ' \u{1F4B0}', cx + 70, y + 65);
+      ctx.fillText(chest.price + ' 💰', cx + 70, y + 65);
 
       // 购买按钮
       (function(ch, yPos) {
@@ -1068,7 +1080,7 @@ class UIManager {
             if (result && result.success) {
               this.saveData = Storage.load();
               this.popup = {
-                title: '\u{1F389} \u5F00\u542F\u5B9D\u7BB1',
+                title: '\u5F00\u542F\u5B9D\u7BB1',
                 message: '\u83B7\u5F97\u968F\u673A\u9053\u5177\uFF01',
                 buttons: [{
                   text: '\u597D\u7684', x: w / 2 - 40, y: 0, w: 80, h: 36,
@@ -1159,7 +1171,7 @@ class UIManager {
 
       // 购买按钮
       (function(spec, yPos) {
-        var btnText = spec.price === 0 ? '\u514D\u8D39' : (spec.price + '\u{1F4B0}');
+        var btnText = spec.price === 0 ? '\u514D\u8D39' : (spec.price + '💰');
         var btnColor = spec.price === 0 ? '#32CD32' : spec.color;
         this._addButton({
           x: cx + cardW - 80, y: yPos + 25, w: 65, h: 36,
@@ -1206,7 +1218,7 @@ class UIManager {
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('\u{1F381} \u6BCF\u65E5\u5956\u52B1', w / 2, 35);
+    ctx.fillText('\u6BCF\u65E5\u5956\u52B1', w / 2, 35);
 
     // 7天日历卡片
     var data = this.saveData;
@@ -1290,14 +1302,14 @@ class UIManager {
     if (canClaim) {
       this._addButton({
         x: (w - 160) / 2, y: cardY + cardH + 45, w: 160, h: 48,
-        text: '\u{1F381} \u9886\u53D6\u5956\u52B1', color: '#FF8C00',
+        text: '\u9886\u53D6\u5956\u52B1', color: '#FF8C00',
         fontSize: 18, bold: true, radius: 14,
         action: function() {
           var result = Storage.claimDailyReward();
           if (result) {
             this.saveData = Storage.load();
             this.popup = {
-              title: '\u{1F389} \u9886\u53D6\u6210\u529F\uFF01',
+              title: '\u9886\u53D6\u6210\u529F\uFF01',
               message: '\u7B2C' + result.day + '\u5929\u5956\u52B1\u5DF2\u9886\u53D6',
               buttons: [{
                 text: '\u597D\u7684', x: w / 2 - 40, y: 0, w: 80, h: 36,
@@ -1372,7 +1384,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: btnStartY, w: btnW, h: btnH,
-      text: '\u25B6 \u7EE7\u7EED\u6E38\u620F', color: '#4CAF50',
+      text: '▶ \u7EE7\u7EED\u6E38\u620F', color: '#4CAF50',
       fontSize: 15, bold: true, radius: 10,
       action: function() {
         if (this.game) this.game.resume();
@@ -1380,7 +1392,7 @@ class UIManager {
       }.bind(this)
     });
 
-    var soundText = '\u{1F50A} \u97F3\u6548 ' + (this.saveData.soundEnabled ? '\u5F00' : '\u5173');
+    var soundText = '🔊 \u97F3\u6548 ' + (this.saveData.soundEnabled ? '\u5F00' : '\u5173');
     this._addButton({
       x: btnX, y: btnStartY + btnGap, w: btnW, h: btnH,
       text: soundText, color: '#4169E1',
@@ -1393,7 +1405,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: btnStartY + btnGap * 2, w: btnW, h: btnH,
-      text: '\u{1F504} \u91CD\u65B0\u5F00\u59CB', color: '#FF8C00',
+      text: '🔄 \u91CD\u65B0\u5F00\u59CB', color: '#FF8C00',
       fontSize: 15, radius: 10,
       action: function() {
         if (this.game && this.game.levelConfig) {
@@ -1495,7 +1507,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.6, w: btnW, h: btnH,
-      text: '\u25B6 \u4E0B\u4E00\u5173', color: '#4CAF50',
+      text: '▶ \u4E0B\u4E00\u5173', color: '#4CAF50',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) {
@@ -1513,7 +1525,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.6 + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u8FD4\u56DE\u5730\u56FE', color: '#FF8C00',
+      text: '\u8FD4\u56DE\u5730\u56FE', color: '#FF8C00',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) this.game.exit();
@@ -1618,7 +1630,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.55, w: btnW, h: btnH,
-      text: '\u{1F504} \u518D\u8BD5\u4E00\u6B21', color: '#FF8C00',
+      text: '🔄 \u518D\u8BD5\u4E00\u6B21', color: '#FF8C00',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game && this.game.levelConfig) {
@@ -1630,7 +1642,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.55 + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u8FD4\u56DE\u5730\u56FE', color: '#888',
+      text: '\u8FD4\u56DE\u5730\u56FE', color: '#888',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) this.game.exit();
@@ -1674,7 +1686,7 @@ class UIManager {
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('\u2699 \u8BBE\u7F6E', w / 2, 35);
+    ctx.fillText('⚙ \u8BBE\u7F6E', w / 2, 35);
 
     // 设置项
     var data = this.saveData;
@@ -1683,14 +1695,14 @@ class UIManager {
     var gap = 5;
 
     // 音效开关
-    this._drawSettingToggle(ctx, w, startY, '\u{1F50A} \u97F3\u6548', data.soundEnabled, function(val) {
+    this._drawSettingToggle(ctx, w, startY, '🔊 \u97F3\u6548', data.soundEnabled, function(val) {
       data.soundEnabled = val;
       Storage.save(data);
       this.saveData = data;
     }.bind(this));
 
     // 音乐开关
-    this._drawSettingToggle(ctx, w, startY + itemH + gap, '\u{1F3B5} \u97F3\u4E50', data.musicEnabled, function(val) {
+    this._drawSettingToggle(ctx, w, startY + itemH + gap, '🎵 \u97F3\u4E50', data.musicEnabled, function(val) {
       data.musicEnabled = val;
       Storage.save(data);
       this.saveData = data;

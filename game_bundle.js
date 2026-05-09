@@ -3,7 +3,7 @@
 
 // ===== config.js =====
 // ============================================================
-// config.js - 萌趣三消 全局配置
+// config.js - 萌趣消消 全局配置
 // ============================================================
 
 const CONFIG = {
@@ -122,7 +122,7 @@ const CONFIG = {
 
 // ===== candy.js =====
 // ============================================================
-// candy.js - 萌趣三消 方块精灵绘制
+// candy.js - 萌趣消消 方块精灵绘制
 // ============================================================
 
 var CandyRenderer = (function() {
@@ -1178,7 +1178,7 @@ var CandyRenderer = (function() {
 
 // ===== particles.js =====
 // ============================================================
-// particles.js - 萌趣三消 粒子系统
+// particles.js - 萌趣消消 粒子系统
 // ============================================================
 
 class ParticleSystem {
@@ -1722,7 +1722,7 @@ class ParticleSystem {
 
 // ===== sound.js =====
 // ============================================================
-// sound.js - 萌趣三消 音效系统（Web Audio API）
+// sound.js - 萌趣消消 音效系统（Web Audio API）
 // ============================================================
 
 var SoundManager = (function() {
@@ -2104,7 +2104,7 @@ var SoundManager = (function() {
 
 // ===== animation.js =====
 // ============================================================
-// animation.js - 萌趣三消 动画系统
+// animation.js - 萌趣消消 动画系统
 // ============================================================
 
 class AnimationManager {
@@ -2675,7 +2675,7 @@ class AnimationManager {
 
 // ===== board.js =====
 // ============================================================
-// board.js - 萌趣三消 棋盘核心逻辑
+// board.js - 萌趣消消 棋盘核心逻辑
 // ============================================================
 
 class Board {
@@ -4070,7 +4070,7 @@ class Board {
 
 // ===== storage.js =====
 // ============================================================
-// storage.js - 萌趣三消 本地存储管理
+// storage.js - 萌趣消消 本地存储管理
 // ============================================================
 
 var Storage = {
@@ -4400,7 +4400,7 @@ var Storage = {
 
 // ===== shop.js =====
 // ============================================================
-// shop.js - 萌趣三消 商城数据
+// shop.js - 萌趣消消 商城数据
 // ============================================================
 
 var ShopData = {
@@ -4411,7 +4411,7 @@ var ShopData = {
       name: '锤子',
       desc: '消除任意一个方块',
       price: 100,
-      icon: '\u{1F528}',
+      icon: '锤',
       color: '#FF6B35'
     },
     {
@@ -4419,7 +4419,7 @@ var ShopData = {
       name: '刷新',
       desc: '重新排列所有方块',
       price: 80,
-      icon: '\u{1F500}',
+      icon: '刷',
       color: '#4169E1'
     },
     {
@@ -4427,7 +4427,7 @@ var ShopData = {
       name: '+5步',
       desc: '增加5步',
       price: 50,
-      icon: '\u2795',
+      icon: '+5',
       color: '#32CD32'
     },
     {
@@ -4435,7 +4435,7 @@ var ShopData = {
       name: '彩色球',
       desc: '消除所有同色方块',
       price: 200,
-      icon: '\u{1F48E}',
+      icon: '彩',
       color: '#9370DB'
     }
   ],
@@ -4449,7 +4449,7 @@ var ShopData = {
       items: [{ id: 'hammer', count: 5 }],
       price: 450,
       originalPrice: 500,
-      icon: '\u{1F528}',
+      icon: '锤',
       color: '#FF6B35',
       discount: '9折'
     },
@@ -4460,7 +4460,7 @@ var ShopData = {
       items: [{ id: 'hammer', count: 2 }, { id: 'refresh', count: 2 }],
       price: 300,
       originalPrice: 360,
-      icon: '\u{1F381}',
+      icon: '礼',
       color: '#FFD700',
       discount: '83折'
     },
@@ -4476,7 +4476,7 @@ var ShopData = {
       ],
       price: 500,
       originalPrice: 740,
-      icon: '\u{1F4E6}',
+      icon: '全',
       color: '#FF69B4',
       discount: '68折'
     }
@@ -4489,7 +4489,7 @@ var ShopData = {
       name: '小宝箱',
       desc: '随机3个道具',
       price: 300,
-      icon: '\u{1F4E6}',
+      icon: '小',
       color: '#CD853F',
       rewards: [
         { items: [{ id: 'hammer', count: 1 }, { id: 'refresh', count: 1 }, { id: 'plus5', count: 1 }] },
@@ -4502,7 +4502,7 @@ var ShopData = {
       name: '大宝箱',
       desc: '随机5个道具 + 1个皮肤碎片',
       price: 800,
-      icon: '\u{1F3C6}',
+      icon: '大',
       color: '#FFD700',
       rewards: [
         { items: [{ id: 'hammer', count: 3 }, { id: 'refresh', count: 2 }] },
@@ -4515,7 +4515,7 @@ var ShopData = {
       name: '豪华宝箱',
       desc: '随机10个道具 + 3个皮肤碎片',
       price: 1500,
-      icon: '\u{1F451}',
+      icon: '豪',
       color: '#FF1493',
       rewards: [
         { items: [{ id: 'hammer', count: 5 }, { id: 'refresh', count: 3 }, { id: 'colorBomb', count: 2 }] },
@@ -4533,7 +4533,7 @@ var ShopData = {
       desc: '首次购买半价！全套道具x1',
       price: 250,
       originalPrice: 500,
-      icon: '\u{1F31F}',
+      icon: '新',
       color: '#00CED1',
       condition: 'firstPurchase',
       items: [
@@ -4551,7 +4551,7 @@ var ShopData = {
       desc: '锤子x3 + +5步x2',
       price: 200,
       originalPrice: 400,
-      icon: '\u{23F0}',
+      icon: '日',
       color: '#FF8C00',
       condition: 'daily',
       items: [
@@ -4568,7 +4568,7 @@ var ShopData = {
       desc: '彩色球x2 + 锤子x2',
       price: 350,
       originalPrice: 600,
-      icon: '\u{1F389}',
+      icon: '末',
       color: '#9370DB',
       condition: 'weekend',
       items: [
@@ -4584,7 +4584,7 @@ var ShopData = {
       desc: '500金币 + 锤子x1',
       price: 0,
       originalPrice: 0,
-      icon: '\u{1F4B0}',
+      icon: '金',
       color: '#FFD700',
       condition: 'free',
       items: [],
@@ -4598,13 +4598,13 @@ var ShopData = {
 
   // ---- 每日奖励 ----
   dailyRewards: [
-    { day: 1, reward: { type: 'coins', amount: 100 }, icon: '\u{1F4B0}', name: '100金币' },
-    { day: 2, reward: { type: 'item', id: 'hammer', count: 1 }, icon: '\u{1F528}', name: '锤子x1' },
-    { day: 3, reward: { type: 'coins', amount: 200 }, icon: '\u{1F4B0}', name: '200金币' },
-    { day: 4, reward: { type: 'item', id: 'plus5', count: 2 }, icon: '\u2795', name: '+5步x2' },
-    { day: 5, reward: { type: 'item', id: 'colorBomb', count: 1 }, icon: '\u{1F48E}', name: '彩色球x1' },
-    { day: 6, reward: { type: 'coins', amount: 500 }, icon: '\u{1F4B0}', name: '500金币' },
-    { day: 7, reward: { type: 'bundle', id: 'bundle2' }, icon: '\u{1F381}', name: '全套道具x1' }
+    { day: 1, reward: { type: 'coins', amount: 100 }, icon: '金', name: '100金币' },
+    { day: 2, reward: { type: 'item', id: 'hammer', count: 1 }, icon: '锤', name: '锤子x1' },
+    { day: 3, reward: { type: 'coins', amount: 200 }, icon: '金', name: '200金币' },
+    { day: 4, reward: { type: 'item', id: 'plus5', count: 2 }, icon: '+5', name: '+5步x2' },
+    { day: 5, reward: { type: 'item', id: 'colorBomb', count: 1 }, icon: '彩', name: '彩色球x1' },
+    { day: 6, reward: { type: 'coins', amount: 500 }, icon: '金', name: '500金币' },
+    { day: 7, reward: { type: 'bundle', id: 'bundle2' }, icon: '礼', name: '全套道具x1' }
   ],
 
   // ---- 辅助方法 ----
@@ -4641,161 +4641,141 @@ var ShopData = {
     return null;
   },
 
-  /** 获取今日可用的特惠列表 */
-  getAvailableSpecials: function() {
-    var available = [];
-    var now = new Date();
-    var dayOfWeek = now.getDay(); // 0=周日, 6=周六
-    var isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
-
-    for (var i = 0; i < this.specials.length; i++) {
-      var sp = this.specials[i];
-      var show = false;
-
-      switch (sp.condition) {
-        case 'firstPurchase':
-          var data = Storage.load();
-          show = !data.firstPurchase;
-          break;
-        case 'daily':
-          show = true;
-          break;
-        case 'weekend':
-          show = isWeekend;
-          break;
-        case 'free':
-          show = true;
-          break;
-        default:
-          show = true;
-      }
-
-      if (show) available.push(sp);
+  /** 获取每日奖励信息 */
+  getDailyReward: function(day) {
+    for (var i = 0; i < this.dailyRewards.length; i++) {
+      if (this.dailyRewards[i].day === day) return this.dailyRewards[i];
     }
-
-    return available;
+    return null;
   },
 
   /** 购买道具 */
   purchaseItem: function(itemId, count) {
     var item = this.getItemById(itemId);
-    if (!item) return { success: false, reason: 'item_not_found' };
-
-    var data = Storage.load();
-    var totalPrice = item.price * (count || 1);
-
-    if (data.coins < totalPrice) {
-      return { success: false, reason: 'insufficient_coins', needed: totalPrice - data.coins };
+    if (!item) return { success: false, message: '道具不存在' };
+    
+    var totalPrice = item.price * count;
+    if (this.saveData.coins < totalPrice) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= totalPrice;
-    if (!data.items) data.items = Storage.getDefault().items;
-    data.items[itemId] = (data.items[itemId] || 0) + (count || 1);
-    Storage.save(data);
-
-    return { success: true, coins: data.coins, itemCount: data.items[itemId] };
+    
+    this.saveData.coins -= totalPrice;
+    this.saveData.items[itemId] = (this.saveData.items[itemId] || 0) + count;
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', item: item, count: count };
   },
 
   /** 购买套餐 */
   purchaseBundle: function(bundleId) {
     var bundle = this.getBundleById(bundleId);
-    if (!bundle) return { success: false, reason: 'bundle_not_found' };
-
-    var data = Storage.load();
-    if (data.coins < bundle.price) {
-      return { success: false, reason: 'insufficient_coins', needed: bundle.price - data.coins };
+    if (!bundle) return { success: false, message: '套餐不存在' };
+    
+    if (this.saveData.coins < bundle.price) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= bundle.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
+    
+    this.saveData.coins -= bundle.price;
     for (var i = 0; i < bundle.items.length; i++) {
-      var bi = bundle.items[i];
-      data.items[bi.id] = (data.items[bi.id] || 0) + (bi.count || 1);
+      var item = bundle.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
     }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items };
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', bundle: bundle };
   },
 
   /** 购买宝箱 */
   purchaseChest: function(chestId) {
     var chest = this.getChestById(chestId);
-    if (!chest) return { success: false, reason: 'chest_not_found' };
-
-    var data = Storage.load();
-    if (data.coins < chest.price) {
-      return { success: false, reason: 'insufficient_coins', needed: chest.price - data.coins };
+    if (!chest) return { success: false, message: '宝箱不存在' };
+    
+    if (this.saveData.coins < chest.price) {
+      return { success: false, message: '金币不足' };
     }
-
-    data.coins -= chest.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
-    // 随机选择奖励
+    
+    this.saveData.coins -= chest.price;
+    
+    // 随机选择一个奖励
     var rewardIndex = Math.floor(Math.random() * chest.rewards.length);
     var reward = chest.rewards[rewardIndex];
-
+    
     for (var i = 0; i < reward.items.length; i++) {
-      var ri = reward.items[i];
-      data.items[ri.id] = (data.items[ri.id] || 0) + (ri.count || 1);
+      var item = reward.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
     }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items, reward: reward };
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '开启成功', chest: chest, reward: reward };
   },
 
   /** 购买特惠 */
   purchaseSpecial: function(specialId) {
-    var sp = this.getSpecialById(specialId);
-    if (!sp) return { success: false, reason: 'special_not_found' };
-
-    var data = Storage.load();
-
-    // 免费特惠
-    if (sp.price === 0) {
-      if (!data.items) data.items = Storage.getDefault().items;
-      if (sp.coinReward) data.coins += sp.coinReward;
-      if (sp.bonusItem) {
-        data.items[sp.bonusItem.id] = (data.items[sp.bonusItem.id] || 0) + (sp.bonusItem.count || 1);
+    var special = this.getSpecialById(specialId);
+    if (!special) return { success: false, message: '特惠不存在' };
+    
+    if (special.condition === 'firstPurchase' && this.saveData.hasPurchased) {
+      return { success: false, message: '仅限首次购买' };
+    }
+    
+    if (special.condition === 'free') {
+      // 免费礼包
+      if (special.coinReward) {
+        this.saveData.coins += special.coinReward;
       }
-      if (sp.items) {
-        for (var i = 0; i < sp.items.length; i++) {
-          var si = sp.items[i];
-          data.items[si.id] = (data.items[si.id] || 0) + (si.count || 1);
+      if (special.bonusItem) {
+        this.saveData.items[special.bonusItem.id] = (this.saveData.items[special.bonusItem.id] || 0) + special.bonusItem.count;
+      }
+      Storage.save(this.saveData);
+      return { success: true, message: '领取成功', special: special };
+    }
+    
+    if (this.saveData.coins < special.price) {
+      return { success: false, message: '金币不足' };
+    }
+    
+    this.saveData.coins -= special.price;
+    for (var i = 0; i < special.items.length; i++) {
+      var item = special.items[i];
+      this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
+    }
+    
+    if (special.condition === 'firstPurchase') {
+      this.saveData.hasPurchased = true;
+    }
+    Storage.save(this.saveData);
+    
+    return { success: true, message: '购买成功', special: special };
+  },
+
+  /** 领取每日奖励 */
+  claimDailyReward: function(day) {
+    var reward = this.getDailyReward(day);
+    if (!reward) return { success: false, message: '奖励不存在' };
+    
+    if (reward.reward.type === 'coins') {
+      this.saveData.coins += reward.reward.amount;
+    } else if (reward.reward.type === 'item') {
+      this.saveData.items[reward.reward.id] = (this.saveData.items[reward.reward.id] || 0) + reward.reward.count;
+    } else if (reward.reward.type === 'bundle') {
+      var bundle = this.getBundleById(reward.reward.id);
+      if (bundle) {
+        for (var i = 0; i < bundle.items.length; i++) {
+          var item = bundle.items[i];
+          this.saveData.items[item.id] = (this.saveData.items[item.id] || 0) + item.count;
         }
       }
-      Storage.save(data);
-      return { success: true, coins: data.coins, items: data.items };
     }
-
-    if (data.coins < sp.price) {
-      return { success: false, reason: 'insufficient_coins', needed: sp.price - data.coins };
-    }
-
-    data.coins -= sp.price;
-    if (!data.items) data.items = Storage.getDefault().items;
-
-    if (sp.items) {
-      for (var i = 0; i < sp.items.length; i++) {
-        var si = sp.items[i];
-        data.items[si.id] = (data.items[si.id] || 0) + (si.count || 1);
-      }
-    }
-
-    // 标记首次购买
-    if (sp.condition === 'firstPurchase') {
-      data.firstPurchase = true;
-    }
-
-    Storage.save(data);
-    return { success: true, coins: data.coins, items: data.items };
+    
+    Storage.save(this.saveData);
+    return { success: true, message: '领取成功', reward: reward };
   }
 };
 
 
 // ===== pets.js =====
 // ============================================================
-// pets.js - 萌趣三消 宠物系统
+// pets.js - 萌趣消消 宠物系统
 // ============================================================
 
 var Pets = {
@@ -5448,7 +5428,7 @@ var Pets = {
 
 // ===== map.js =====
 // ============================================================
-// map.js - 萌趣三消 关卡地图数据（50关）
+// map.js - 萌趣消消 关卡地图数据（50关）
 // ============================================================
 
 var LevelMap = {
@@ -5853,7 +5833,7 @@ var LevelMap = {
 
 // ===== ui.js =====
 // ============================================================
-// ui.js - 萌趣三消 UI界面管理器
+// ui.js - 萌趣消消 UI界面管理器
 // ============================================================
 
 class UIManager {
@@ -6035,6 +6015,18 @@ class UIManager {
           rotation: Math.random() * Math.PI * 2,
           rotSpeed: (Math.random() - 0.5) * 0.1
         });
+      }
+    }
+
+    if (screen === 'game') {
+      // 初始化游戏（如果还未初始化）
+      if (!this.game) {
+        this.game = new Game(this.canvas);
+        this.game.ui = this;
+      }
+      // 如果没有活动关卡，自动开始第1关
+      if (!this.game.board || this.game.state === 'idle') {
+        this.game.startLevel(1);
       }
     }
   }
@@ -6372,7 +6364,7 @@ class UIManager {
     if (showBack) {
       this._addButton({
         x: 10, y: 8, w: 60, h: 34,
-        text: '\u2190 \u8FD4\u56DE', color: 'rgba(255,255,255,0.2)',
+        text: '← \u8FD4\u56DE', color: 'rgba(255,255,255,0.2)',
         fontSize: 13, radius: 8,
         action: function() { this.setScreen('menu'); }.bind(this)
       });
@@ -6454,7 +6446,7 @@ class UIManager {
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'rgba(0,0,0,0.3)';
-    ctx.fillText('萌趣三消', w / 2 + 2, titleY + 2);
+    ctx.fillText('萌趣消消', w / 2 + 2, titleY + 2);
 
     // 标题金色渐变
     var titleGrad = ctx.createLinearGradient(w / 2 - 100, titleY - 20, w / 2 + 100, titleY + 20);
@@ -6464,12 +6456,12 @@ class UIManager {
     titleGrad.addColorStop(0.7, '#FFF8DC');
     titleGrad.addColorStop(1, '#FFD700');
     ctx.fillStyle = titleGrad;
-    ctx.fillText('萌趣三消', w / 2, titleY);
+    ctx.fillText('萌趣消消', w / 2, titleY);
 
     // 标题描边
     ctx.strokeStyle = '#DAA520';
     ctx.lineWidth = 1.5;
-    ctx.strokeText('萌趣三消', w / 2, titleY);
+    ctx.strokeText('萌趣消消', w / 2, titleY);
     ctx.restore();
 
     // 吉祥物（小狐狸头像）
@@ -6497,35 +6489,35 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: startBtnY, w: btnW, h: btnH,
-      text: '\u25B6 \u5F00\u59CB\u6E38\u620F', color: '#4CAF50',
+      text: '▶ \u5F00\u59CB\u6E38\u620F', color: '#4CAF50',
       fontSize: 18, bold: true, radius: 14,
       action: function() { this.setScreen('map'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u5173\u5361\u5730\u56FE', color: '#FF8C00',
+      text: '\u5173\u5361\u5730\u56FE', color: '#FF8C00',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('map'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 116, w: btnW, h: btnH,
-      text: '\u{1F6D2} \u5546\u57CE', color: '#4169E1',
+      text: '\u5546\u57CE', color: '#4169E1',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('shop'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 174, w: btnW, h: btnH,
-      text: '\u{1F381} \u6BCF\u65E5\u5956\u52B1', color: '#9370DB',
+      text: '\u6BCF\u65E5\u5956\u52B1', color: '#9370DB',
       fontSize: 16, bold: true, radius: 14,
       action: function() { this.setScreen('daily'); }.bind(this)
     });
 
     this._addButton({
       x: btnX, y: startBtnY + 232, w: btnW, h: 40,
-      text: '\u2699 \u8BBE\u7F6E', color: '#888888',
+      text: '⚙ \u8BBE\u7F6E', color: '#888888',
       fontSize: 14, radius: 10,
       action: function() { this.setScreen('settings'); }.bind(this)
     });
@@ -6836,7 +6828,7 @@ class UIManager {
       (function(itm, yPos) {
         this._addButton({
           x: cx + cardW - 70, y: yPos + 18, w: 60, h: 34,
-          text: itm.price + '\u{1F4B0}', color: '#FF8C00',
+          text: itm.price + '💰', color: '#FF8C00',
           fontSize: 12, bold: true, radius: 8,
           action: function() {
             var result;
@@ -6909,7 +6901,7 @@ class UIManager {
       // 价格
       ctx.fillStyle = '#FFD700';
       ctx.font = 'bold 14px Arial';
-      ctx.fillText(chest.price + ' \u{1F4B0}', cx + 70, y + 65);
+      ctx.fillText(chest.price + ' 💰', cx + 70, y + 65);
 
       // 购买按钮
       (function(ch, yPos) {
@@ -6922,7 +6914,7 @@ class UIManager {
             if (result && result.success) {
               this.saveData = Storage.load();
               this.popup = {
-                title: '\u{1F389} \u5F00\u542F\u5B9D\u7BB1',
+                title: '\u5F00\u542F\u5B9D\u7BB1',
                 message: '\u83B7\u5F97\u968F\u673A\u9053\u5177\uFF01',
                 buttons: [{
                   text: '\u597D\u7684', x: w / 2 - 40, y: 0, w: 80, h: 36,
@@ -7013,7 +7005,7 @@ class UIManager {
 
       // 购买按钮
       (function(spec, yPos) {
-        var btnText = spec.price === 0 ? '\u514D\u8D39' : (spec.price + '\u{1F4B0}');
+        var btnText = spec.price === 0 ? '\u514D\u8D39' : (spec.price + '💰');
         var btnColor = spec.price === 0 ? '#32CD32' : spec.color;
         this._addButton({
           x: cx + cardW - 80, y: yPos + 25, w: 65, h: 36,
@@ -7060,7 +7052,7 @@ class UIManager {
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('\u{1F381} \u6BCF\u65E5\u5956\u52B1', w / 2, 35);
+    ctx.fillText('\u6BCF\u65E5\u5956\u52B1', w / 2, 35);
 
     // 7天日历卡片
     var data = this.saveData;
@@ -7144,14 +7136,14 @@ class UIManager {
     if (canClaim) {
       this._addButton({
         x: (w - 160) / 2, y: cardY + cardH + 45, w: 160, h: 48,
-        text: '\u{1F381} \u9886\u53D6\u5956\u52B1', color: '#FF8C00',
+        text: '\u9886\u53D6\u5956\u52B1', color: '#FF8C00',
         fontSize: 18, bold: true, radius: 14,
         action: function() {
           var result = Storage.claimDailyReward();
           if (result) {
             this.saveData = Storage.load();
             this.popup = {
-              title: '\u{1F389} \u9886\u53D6\u6210\u529F\uFF01',
+              title: '\u9886\u53D6\u6210\u529F\uFF01',
               message: '\u7B2C' + result.day + '\u5929\u5956\u52B1\u5DF2\u9886\u53D6',
               buttons: [{
                 text: '\u597D\u7684', x: w / 2 - 40, y: 0, w: 80, h: 36,
@@ -7226,7 +7218,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: btnStartY, w: btnW, h: btnH,
-      text: '\u25B6 \u7EE7\u7EED\u6E38\u620F', color: '#4CAF50',
+      text: '▶ \u7EE7\u7EED\u6E38\u620F', color: '#4CAF50',
       fontSize: 15, bold: true, radius: 10,
       action: function() {
         if (this.game) this.game.resume();
@@ -7234,7 +7226,7 @@ class UIManager {
       }.bind(this)
     });
 
-    var soundText = '\u{1F50A} \u97F3\u6548 ' + (this.saveData.soundEnabled ? '\u5F00' : '\u5173');
+    var soundText = '🔊 \u97F3\u6548 ' + (this.saveData.soundEnabled ? '\u5F00' : '\u5173');
     this._addButton({
       x: btnX, y: btnStartY + btnGap, w: btnW, h: btnH,
       text: soundText, color: '#4169E1',
@@ -7247,7 +7239,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: btnStartY + btnGap * 2, w: btnW, h: btnH,
-      text: '\u{1F504} \u91CD\u65B0\u5F00\u59CB', color: '#FF8C00',
+      text: '🔄 \u91CD\u65B0\u5F00\u59CB', color: '#FF8C00',
       fontSize: 15, radius: 10,
       action: function() {
         if (this.game && this.game.levelConfig) {
@@ -7349,7 +7341,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.6, w: btnW, h: btnH,
-      text: '\u25B6 \u4E0B\u4E00\u5173', color: '#4CAF50',
+      text: '▶ \u4E0B\u4E00\u5173', color: '#4CAF50',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) {
@@ -7367,7 +7359,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.6 + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u8FD4\u56DE\u5730\u56FE', color: '#FF8C00',
+      text: '\u8FD4\u56DE\u5730\u56FE', color: '#FF8C00',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) this.game.exit();
@@ -7472,7 +7464,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.55, w: btnW, h: btnH,
-      text: '\u{1F504} \u518D\u8BD5\u4E00\u6B21', color: '#FF8C00',
+      text: '🔄 \u518D\u8BD5\u4E00\u6B21', color: '#FF8C00',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game && this.game.levelConfig) {
@@ -7484,7 +7476,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.55 + 58, w: btnW, h: btnH,
-      text: '\u{1F5FA} \u8FD4\u56DE\u5730\u56FE', color: '#888',
+      text: '\u8FD4\u56DE\u5730\u56FE', color: '#888',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) this.game.exit();
@@ -7528,7 +7520,7 @@ class UIManager {
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('\u2699 \u8BBE\u7F6E', w / 2, 35);
+    ctx.fillText('⚙ \u8BBE\u7F6E', w / 2, 35);
 
     // 设置项
     var data = this.saveData;
@@ -7537,14 +7529,14 @@ class UIManager {
     var gap = 5;
 
     // 音效开关
-    this._drawSettingToggle(ctx, w, startY, '\u{1F50A} \u97F3\u6548', data.soundEnabled, function(val) {
+    this._drawSettingToggle(ctx, w, startY, '🔊 \u97F3\u6548', data.soundEnabled, function(val) {
       data.soundEnabled = val;
       Storage.save(data);
       this.saveData = data;
     }.bind(this));
 
     // 音乐开关
-    this._drawSettingToggle(ctx, w, startY + itemH + gap, '\u{1F3B5} \u97F3\u4E50', data.musicEnabled, function(val) {
+    this._drawSettingToggle(ctx, w, startY + itemH + gap, '🎵 \u97F3\u4E50', data.musicEnabled, function(val) {
       data.musicEnabled = val;
       Storage.save(data);
       this.saveData = data;
@@ -7895,7 +7887,7 @@ class UIManager {
 
 // ===== game.js =====
 // ============================================================
-// game.js - 萌趣三消 游戏主控制器
+// game.js - 萌趣消消 游戏主控制器
 // ============================================================
 
 class Game {
@@ -9162,7 +9154,7 @@ class Game {
 
 // ===== main.js =====
 /**
- * 萌趣三消 - 主入口
+ * 萌趣消消 - 主入口
  * 初始化所有系统，启动游戏循环
  */
 
@@ -9219,7 +9211,7 @@ class Game {
     // 开始游戏循环
     requestAnimationFrame(gameLoop);
 
-    console.log('萌趣三消 已启动！');
+    console.log('萌趣消消 已启动！');
   }
 
   function resize() {
