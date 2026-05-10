@@ -1,4 +1,4 @@
-// 萌趣三消 - Happy Match Bundle
+// 萌趣消消 - Happy Match Bundle
 // Auto-generated
 
 // ===== config.js =====
@@ -6364,7 +6364,7 @@ class UIManager {
     if (showBack) {
       this._addButton({
         x: 10, y: 8, w: 60, h: 34,
-        text: '← \u8FD4\u56DE', color: 'rgba(255,255,255,0.2)',
+        text: '返回', color: 'rgba(255,255,255,0.2)',
         fontSize: 13, radius: 8,
         action: function() { this.setScreen('menu'); }.bind(this)
       });
@@ -6489,7 +6489,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: startBtnY, w: btnW, h: btnH,
-      text: '▶ \u5F00\u59CB\u6E38\u620F', color: '#4CAF50',
+      text: '开始游戏', color: '#4CAF50',
       fontSize: 18, bold: true, radius: 14,
       action: function() { this.setScreen('map'); }.bind(this)
     });
@@ -6517,7 +6517,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: startBtnY + 232, w: btnW, h: 40,
-      text: '⚙ \u8BBE\u7F6E', color: '#888888',
+      text: '设置', color: '#888888',
       fontSize: 14, radius: 10,
       action: function() { this.setScreen('settings'); }.bind(this)
     });
@@ -7218,7 +7218,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: btnStartY, w: btnW, h: btnH,
-      text: '▶ \u7EE7\u7EED\u6E38\u620F', color: '#4CAF50',
+      text: '继续游戏', color: '#4CAF50',
       fontSize: 15, bold: true, radius: 10,
       action: function() {
         if (this.game) this.game.resume();
@@ -7341,7 +7341,7 @@ class UIManager {
 
     this._addButton({
       x: btnX, y: h * 0.6, w: btnW, h: btnH,
-      text: '▶ \u4E0B\u4E00\u5173', color: '#4CAF50',
+      text: '下一关', color: '#4CAF50',
       fontSize: 17, bold: true, radius: 12,
       action: function() {
         if (this.game) {
@@ -7520,7 +7520,7 @@ class UIManager {
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('⚙ \u8BBE\u7F6E', w / 2, 35);
+    ctx.fillText('设置', w / 2, 35);
 
     // 设置项
     var data = this.saveData;
